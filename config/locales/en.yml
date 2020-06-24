@@ -57,14 +57,14 @@ en:
         title: Recording Default Visibility
         warning: This setting will only be applied to rooms in which a conference is  not currently taking place
       registration:
-        info: Change the user registration control
+        info: Change the user registration setting
         title: Registration Management
         methods:
           approval: Approve/Decline
           invite: Join by Invitation
           open: Open Registration
       rooms:
-        info: Limits the number of rooms that a user can have (including Home Room). This setting does not apply to administrators.
+        info: Limits the number of rooms that a user can have (Home Room included). This setting does not apply to administrators.
         title: Number of Rooms per User
       subtitle: Site Settings
       title: Site Settings
@@ -155,11 +155,11 @@ en:
       message: Invalid end point and secret
       title: Server Error
     internal:
-      message: Looks like something went wrong on Conference Café.
+      message: Sorry, an undiagnosed error has occurred.
       help: The error has been logged, and action will be taken.
       report: Report Issue
     maintenance:
-      message: Sorry, Conference Café is offline for maintenance.
+      message: Sorry, the system is offline for maintenance.
       help: Please contact an administrator.
     migration_error:
       contact_admin: If you are not an administrator, please contact one.
@@ -233,7 +233,7 @@ en:
         footer: 'Conference Café is a feature-packed Web conferencing system. For more information, visit https://conference.cafe/.'
   landing:
     about: "%{href} is the perfect place for conferencing and training in one-on-one or one-on-many meetings, with audio and video communication, instant messaging, desktop sharing, session recording, session transcription, collaborative note-taking, and more besides. Conference hosts can create their own configurable rooms to host sessions, and participants can be invited join in one click."
-    welcome: Welcome to Conference Café
+    welcome: Conference Café
     video: Watch a tutorial on how to use the site
     upgrade: See how to upgrade to 2.0!
     version: A new software version has been released, but the current database isn't compatible.
@@ -245,7 +245,7 @@ en:
     user:
       approve:
         info: Your account has been approved.
-        signin: To access your personal rooms, click the button below and log in.
+        signin: To access your personal conference rooms, click the button below and log in.
         signin_link: log in
         signup:
           info: A new user has registered for an account.
@@ -402,7 +402,7 @@ en:
       merge_success: Successfully merged your Twitter account with your new account. Your old Twitter account has been deleted
     invite:
       fail: Your token is either invalid or has expired. If you believe this is a mistake, please contact an administrator.
-      no_invite: You do not have an invitation to join. Please contact an administrator to receive one.
+      no_invite: Sorry, you need an invitation before you can register. Please send a message via the contact form to request one.
   rename: Rename
   reset_password:
     subtitle: Reset Password
