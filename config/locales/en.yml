@@ -214,11 +214,11 @@ en:
   header:
     all_recordings: All Recordings
     dropdown:
-      account_settings: Account Settings
+      account_settings: Site Settings
       help: Need help?
       home: Home
       settings: Profile
-      signout: Sign out
+      signout: Log out
   home_room: Home Room
   info_update_success: Information successfully updated.
   invalid_credentials: The email and/or password you entered did not match the records. Please try again, or click the Forgot Password link to reset your password.
