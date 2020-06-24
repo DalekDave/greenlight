@@ -248,7 +248,7 @@ en:
         signin: To access your personal rooms, click the button below and log in.
         signin_link: log in
         signup:
-          info: A new user has registered to use Conference Café.
+          info: A new user has registered for an account.
           more-info: To allow this user access to Conference Café you must approve their account in the Site Settings page.
           admins_link: Visit the Site Settings page
           subject: New User Registration
