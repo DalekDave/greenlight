@@ -20,7 +20,7 @@ en:
   activerecord:
     attributes:
       user:
-        accepted_terms: "Terms and Conditions"
+        accepted_terms: "Terms of Use"
         email: Email
         name: Name
         password: Password
@@ -42,16 +42,42 @@ en:
         info: Change the site logo displayed in the top-left corner of pages
         placeholder: Image URL...
         title: Site Logo
+        invalid: Invalid URL
+      legal:
+        change: Change URL
+        info: Change the Terms of Use link displayed at the bottom of the page
+        placeholder: Legal Info URL...
+        title: Legal Info
+        invalid: Invalid URL
+      privpolicy:
+        change: Change URL
+        info: Change the Privacy Info link displayed at the bottom of the page
+        placeholder: Privacy Info URL...
+        title: Privacy Info
+        invalid: Invalid URL
       cache:
         info: Clears the stored provider cache, which forces a new request for the updated info
         title: Clear Provider Cache
         button: Clear Cache
+      clear_auth:
+        info: Clears the current authenticator for users allowing them to sign back in using a different authentication method
+        title: Clear Current Authenticator
+        button: Clear Auth
       color:
         info: Changing the Regular color will change both the Lightened and Darkened colors. The Lightened and Darkened colors can then be changed individually
         title: Primary Color
         regular: Regular
-        lighten: Lightened
-        darken: Darkened
+        lighten: Lighten
+        darken: Darken
+      log_level:
+        title: Log Level
+        information: Change the Log Level for the entire deployment
+        debug: Debug
+        info: Info
+        warn: Warn
+        error: Error
+        fatal: Fatal
+        unknown: Unknown
       recording_visibility:
         info: Set the default recording visbility for new recordings
         title: Recording Default Visibility
@@ -66,6 +92,9 @@ en:
       rooms:
         info: Limits the number of rooms that a user can have (Home Room included). This setting does not apply to administrators.
         title: Number of Rooms per User
+      shared_access:
+        info: Setting this to disabled will remove the button from the Room Options dropdown, preventing users from sharing rooms
+        title: Allow Users to Share Rooms
       subtitle: Site Settings
       title: Site Settings
     flash:
@@ -77,28 +106,33 @@ en:
       demoted: User has been successfully demoted
       invite: Invite successfully sent to %{email}
       invite_email_verification: Mail delivery must be enabled in order to use this method. Please contact an administrator.
+      merge_fail: There was an issue merging the user accounts. Please check the users selected and try again 
+      merge_success: User accounts merged successfully
       perm_deleted: User has been permanently deleted
       promoted: User has been successfully promoted
       registration_method_updated: Registration method successfully updated
       reset_password: The user has been sent an email to reset their password. (Please ask them to check their spam folder if they haven't received it.)
       restored: User has been successfully restored
+      room_configuration: Room settings successfully updated
       settings: Site settings successfully updated
       unauthorized: You are not authorized to perform actions on this user
     recordings:
-      title: Server Recordings
+      title: Recording Admin
       no_recordings: No recordings currently exist.
     roles:
-      can_create_rooms: Can create rooms
+      appear_in_share_list: Include users with this role in dropdown for sharing rooms
+      can_create_rooms: Allow users with this role to create rooms
       delete: Delete the role
-      invalid_create: There was a problem creating the new role. Please check the role settings and try again.
-      invalid_order: There was a problem updating the priority of the role. Please check the settings and try again.
-      invalid_update: There was a problem updating the permissions associated with the role. Please check the settings and try again.
+      invalid_create: There was a problem creating a new role. Please check the role values and try again
+      invalid_order: There was a problem updating the priority of the role. Please check the values and try again
+      invalid_update: There was a problem updating the permissions of the role. Please check the values and try again
+      manage_rooms_recordings: Allow users with this role to manage rooms and recordings
       name: Role Name
-      new_role: Create a new role
+      new_role: New Role
       role_has_users: This role is assigned to %{user_count} accounts. Please remove all accounts from this role before deleting it.
-      title: Roles
-      promote_email: Send an email to users when they are assigned this role
-      demote_email: Send an email to users when they are removed from this role
+      title: Role Admin
+      promote_email: Mail users when they are assigned this role
+      demote_email: Mail users when they are removed from this role
       edit_site_settings: Allow users with this role to edit site settings
       edit_roles: Allow users with this role to edit other roles
       manage_users: Allow users with this role to manage users
@@ -106,9 +140,34 @@ en:
       colour:
         title: Role Color
         info: Set the color that will be associated with the role
-    title: Site Settings
+    room_configuration:
+      title: Default Room Settings
+      mute:
+        info: Automatically mute users on joining meeting
+      require_moderator:
+        info: Prompt meeting moderator when a user tries to join meeting. User allowed to join if approved.
+      allow_any:
+        info: Allows any user to start meeting at any time. By default, only room owner can start the meeting.
+      all_moderator:
+        info: Give all users moderator privileges on joining meeting.
+      options:
+        disabled: Disabled
+        enabled: Always Enabled
+        optional: Optional
+    rooms:
+      title: Room Admin
+      table:
+        ended: "Ended: %{session}"
+        id: ID
+        not_running: Not Running
+        participants: Participants
+        running: Running
+        started: "Started: %{session}"
+        status: Status
+        view: View
+    title: Site Admin
     users:
-      invite: Invite User
+      invite: Invite User(s)
       edit:
         title: Edit User Details
       settings:
@@ -118,6 +177,7 @@ en:
         delete: Delete
         edit: Edit
         edit_roles: Edit the user roles
+        merge: Merge
         perm_delete: Permanently Delete
         unban: Unban User
         undelete: Undelete
@@ -130,7 +190,7 @@ en:
         role: Role
         uid: User ID
         username: User name
-      title: Manage Users
+      title: User Admin
   add_to_google_calendar: "Add to Google Calendar"
   bigbluebutton: Conference Café
   bigbluebutton_exception: Sorry, an error occurred while starting the meeting.
@@ -201,10 +261,8 @@ en:
     designs: Custom Configurations
     authentication: User Authentication
   footer:
-    powered_by: A Collaboration Café sister site
-    legal_label: Legal info
-    privacy_label: Privacy info
-    imprint_label: Imprint
+    legal: Legal Info
+    privpolicy: Privacy Info
   forgot_password:
     subtitle: Forgot Password
     email: Email
@@ -212,13 +270,13 @@ en:
   go_back: Go back
   greenlight: Conference Café
   header:
-    all_recordings: All Recordings
+    all_recordings: Recordings Index
     dropdown:
-      account_settings: Site Settings
-      help: Need help?
-      home: Home
-      settings: Profile
-      signout: Log out
+      account_settings: Site Admin
+      help: Help
+      home: Dashboard
+      settings: Account Admin
+      signout: Log Out
   home_room: Home Room
   info_update_success: Information successfully updated.
   invalid_credentials: The email and/or password you entered did not match the records. Please try again, or click the Forgot Password link to reset your password.
@@ -294,9 +352,10 @@ en:
   maintenance:
     window_alert: Maintenance window scheduled for %{date}
   max_concurrent: The maximum number of concurrent sessions allowed has been reached!
+  merged: Merged
   modal:
     create_role:
-      create: Create a new Role
+      create: Create New Role
       footer_text: You can edit the individual permissions for this role after you've created it
       name_placeholder: Enter a role name...
       not_blank: Role name cannot be blank.
@@ -323,15 +382,19 @@ en:
       warning: You will <b>not</b> be able to recover this room
       recording_warning: or any of its %{recordings_num} associated recordings.
     invite_user:
-      email_placeholder: Enter the users' email addresses (separated by commas)
-      footer: The user will receive an email with instructions on how to Register
+      email_placeholder: Email(s) [comma-separated if multiple]
+      footer: Users will receive an email with instructions on how to complete account registration
       send: Send Invite
-      title: Invite User
+      title: Invite User(s)
     login:
       or: or
       with: Log in with %{provider}
       forgot_password: Forgot Password?
     rename_recording:
+    remove_shared:
+      title: Are you sure you want to remove this room from your room list?
+      delete: I'm sure, remove this room.
+      warning: You will <b>not</b> be able to access this room anymore.
     room_settings:
       title: Room Settings
       update: Update Room
@@ -339,12 +402,26 @@ en:
       join_moderator: All users join as moderators
       mute: Mute users when they join
       require_approval: Require moderator approval before joining
-      start: Allow any user to start this meeting
+      start: Allow any user to start meeting
       footer_text: You can change room settings at anytime.
     rename_room:
       name_placeholder: Enter a new room name...
-  name_update_success: Room name changed successfully.
-  no_user_email_exists: There is no existing user with the specified email address. Please make sure you typed it correctly.
+    share_access:
+      footer: Sharing a room with a user allows them to start the room and view the room's recordings
+      list: Shared With
+      title: Share Room Access
+      save: Save Changes
+      cancel_changes: Cancel Changes
+      select: Select User
+    merge_user:
+      cancel: Cancel
+      from: Account to be Merged
+      title: Merge User Accounts
+      to: Primary Account
+      save: Merge
+      footer: The rooms of the account to be merged will be transfered over to the Primary Account's room list and then the account will be deleted.
+  name_update_success: Room name successfully changed!
+  no_user_email_exists: There is no existing user with the email specified. Please make sure you typed it correctly.
   omniauth_error: An error occured while authenticating with omniauth. Please try again or contact an administrator!
   omniauth_specific_error: "%{error} occured while authenticating with omniauth. Please try again or contact an administrator!"
   pagy:
@@ -353,7 +430,7 @@ en:
       next: "Next &rsaquo;"
       gap: "&hellip;"
   password: Password
-  password_empty_notice: Password cannot be empty.
+  password_empty_notice: Password cannot be left blank.
   password_reset_success: Password has been reset.
   password_different_notice: Password confirmation does not match.
   provider:
@@ -366,13 +443,13 @@ en:
       recaptcha_unreachable: Could not validate your reCAPTCHA response. Please try again.
       verification_failed: reCAPTCHA verification failed, please try again.
   recording:
-    all_recordings: All Recordings
+    all_recordings: Recordings Index
     email: Email Recording
     error: There was an error retrieving %{count} recording(s)
     no_recordings: This room has no %{inject} recordings.
-    no_user_recordings: You currently have no recordings.
+    no_user_recordings: There are currently no recordings.
     no_matched_recordings: No %{inject} recordings match your search.
-    recorded_on: Recorded on %{date}
+    recorded_on: Recorded %{date}
     table:
       name: Name
       thumbnails: Thumbnails
@@ -391,7 +468,7 @@ en:
       video: Video
   registration:
     approval:
-      fail: Your account has not been approved yet. If multiples days have passed since you registered, please contact an administrator.
+      fail: Your account has not been approved yet. If multiple days have passed since you registered, please contact an administrator.
       signup: Your account was successfully created. It has been sent to an administrator for approval.
     banned:
       fail: You do not have access to this application. If you believe this is a mistake, please contact an administrator. 
@@ -401,14 +478,17 @@ en:
       twitter_signup: Registration via Twitter has been deprecated. Please use a different sign-up method
       merge_success: Successfully merged your Twitter account with your new account. Your old Twitter account has been deleted
     invite:
-      fail: Your token is either invalid or has expired. If you believe this is a mistake, please contact an administrator.
+      fail: Your token is either invalid or has expired. If you believe this is a mistake, please contact your administrator.
       no_invite: Sorry, you need an invitation before you can register. Please send a message via the contact form to request one.
+  remove: Remove
   rename: Rename
   reset_password:
+    invalid_token: Password reset token is invalid. Please try resetting your password again.
     subtitle: Reset Password
     password: New Password
     confirm: New Password Confirmation
     update: Update Password
+    auth_change: The authentication method has changed. Please check your email to set your password.
   roles:
     active: Active
     admin: Admin
@@ -418,17 +498,22 @@ en:
     user: User
   room:
     access_code_required: Please enter a valid access code to join the room
-    create_room: Create a Room
+    create_room: New Room
     create_room_error: There was an error creating the room
     create_room_success: Room created successfully
+    delete:
+      home_room: Can't delete user's Home Room
+      success: Room deleted successfully
+      fail: Failed to delete room (%{error})
     enter_the_access_code: Enter the room's access code
     invalid_provider: You have entered an invalid URL. Please check the URL and try again.
     invited: You have been invited to join
-    invite_participants: Invite Participants
+    invite_participants: Invitation Link
     join: Join
     last_session: Last session on %{session}
     login: Enter
     owner: Owner
+    owner_banned: This room is currently unavailable
     no_room:
       description: Enter the room URL or the room ID for the room you want to join.
       edit_profile: Edit User Profile
@@ -444,7 +529,13 @@ en:
     room_limit_exceeded: You have exceeded the number of rooms allowed. Please delete %{difference} room(s) first.
     sessions: Sessions
     settings: Room Settings
-    start: Start
+    share: Manage Access
+    shared_by: Shared by %{email}
+    remove_shared_access_success: Successfully removed shared room from your room list
+    remove_shared_access_error: There was an error removing the shared room from your list
+    shared_access_success: Room shared successfully
+    shared_access_error: There was an error sharing the room
+    start: Go To Room
     unavailable: This room is currently unavailable because the owner's email address has not yet been verified.
     update_settings_error: There was an error updating the room settings
     update_settings_success: Room settings successfully updated
@@ -453,26 +544,27 @@ en:
       auto: You will automatically join when the meeting starts.
   settings:
     account:
-      fullname: Full name
+      fullname: Name
       language: Language
       provider: Provider
       image: Image
       image_url: Profile Image URL
       roles: User Roles
-      subtitle: Account Info
-      title: Account Info
+      subtitle: Profile Settings
+      title: Profile Settings
+      reset_password: Reset user password
     delete:
       button: Yes, I would like to delete my account.
-      disclaimer: If you choose to delete your account, it will <b>NOT</b> be recoverable. All information associated with your account will be removed, including settings, rooms, and recordings.
-      subtitle: Permanently Delete your Account
-      title: Delete Account
+      disclaimer: If you choose to delete your account, it will <b>NOT</b> be recoverable. All data associated with your account will be irretrievably removed, including settings, rooms, and recordings.
+      subtitle: Delete Your Account
+      title: Delete Your Account
     password:
       confirmation: New Password Confirmation
       new: New Password
       old: Old Password
-      subtitle: Change your Password
-      title: Password
-    title: Profile
+      subtitle: Change Your Password
+      title: Change Your Password
+    title: Account Admin
     search: Search
   signup:
     password_confirm: Password Confirmation
@@ -481,8 +573,8 @@ en:
     with: Register with %{provider}
   terms:
     accept: I accept the %{href}
-    accept_existing: I accept the terms and conditions
-    title: Terms and Conditions
+    accept_existing: I accept the Terms of Use
+    title: Terms of Use
   test_install: >
     This deployment is using a pre-configured testing server, you should replace this with your own.
     For details, see the %{href}.

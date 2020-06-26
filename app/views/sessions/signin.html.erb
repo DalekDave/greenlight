@@ -17,10 +17,10 @@
   <div class="row pt-7">
     <div class="col col-lg-6 offset-lg-3">
       <div class="card">
-        <div class="card-header background">
+        <div class="card-header">
           <h4 class="mt-2"><%= t("login_title") %></h4>
         </div>
-        <div class="card-body background">
+        <div class="card-body">
           <% unless iconset_providers.length.zero? %>
             <% iconset_providers.each do |provider| %>
               <%= link_to omniauth_login_url(provider), class: "customBtn-#{provider} oauth-signin" do %>
