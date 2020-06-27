@@ -524,7 +524,7 @@ en:
       recent_rooms: Go To a Recently-Joined Room
       title: Join a Room
     no_sessions: There have not yet been any sessions in this room.
-    recordings: Room Recordings
+    recordings: Recordings
     room_limit: You have reached the maximum number of rooms allowed
     room_limit_exceeded: You have exceeded the number of rooms allowed. Please delete %{difference} room(s) first.
     sessions: Sessions

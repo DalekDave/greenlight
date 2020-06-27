@@ -506,9 +506,9 @@
 @font-face {
   font-family: 'Libre Baskerville';
   src:
-    url('../fonts/LibreBaskerville-Regular.ttf') format('truetype'),
-    url('../fonts/LibreBaskerville-Regular.woff') format('woff'),
-    url('../fonts/LibreBaskerville-Regular.svg') format('svg');
+    url('LibreBaskerville/LibreBaskerville-Regular.ttf') format('truetype'),
+    url('LibreBaskerville/LibreBaskerville-Regular.woff') format('woff'),
+    url('LibreBaskerville/LibreBaskerville-Regular.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -516,19 +516,19 @@
 @font-face {
   font-family: 'Open Sans';
   src:
-    url('../fonts/OpenSans-Regular.ttf') format('truetype'),
-    url('../fonts/OpenSans-Regular.woff') format('woff');
+    url('OpenSans/OpenSans-Regular.ttf') format('truetype'),
+    url('OpenSans/OpenSans-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'themefisher-font';
-  src:  url('../fonts/themefisher-font692c.eot?ug5hnh');
-  src:  url('../fonts/themefisher-font692c.eot?ug5hnh#iefix') format('embedded-opentype'),
-    url('../fonts/themefisher-font692c.ttf?ug5hnh') format('truetype'),
-    url('../fonts/themefisher-font692c.woff?ug5hnh') format('woff'),
-    url('../fonts/themefisher-font692c.svg?ug5hnh#themefisher-font') format('svg');
+  src:  url('themefisher-font692c.eot');
+  src:  url('themefisher-font692c.eot') format('embedded-opentype'),
+    url('themefisher-font692c.ttf') format('truetype'),
+    url('themefisher-font692c.woff') format('woff'),
+    url('themefisher-font692c.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
