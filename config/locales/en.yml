@@ -117,7 +117,7 @@ en:
       settings: Site settings successfully updated
       unauthorized: You are not authorized to perform actions on this user
     recordings:
-      title: Recording Admin
+      title: Recordings Admin
       no_recordings: No recordings currently exist.
     roles:
       appear_in_share_list: Include users with this role in dropdown for sharing rooms
