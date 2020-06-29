@@ -297,7 +297,7 @@ en:
     version: A new software version has been released, but the current database isn't compatible.
   language_default: Default (browser language)
   ldap_error: Unable to connect to the LDAP server. Please check your LDAP configuration in the .env file, and make sure the server is running.
-  login: Log in
+  login: Log In
   login_title: Log in to your account
   mailer:
     user:

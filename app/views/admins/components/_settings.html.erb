@@ -57,32 +57,6 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-12">
-      <div class="mb-6 form-group">
-        <label class="form-label"><%= t("administrator.site_settings.color.title") %></label>
-        <label class="form-label text-muted"><%= t("administrator.site_settings.color.info") %></label>
-          <div class="color-inputs">
-            <input id="coloring-path-regular" type="hidden" value="<%= admin_coloring_path %>">
-            <input id="coloring-path-lighten" type="hidden" value="<%= admin_update_settings_path(setting: "Primary Color Lighten") %>">
-            <input id="coloring-path-darken" type="hidden" value="<%= admin_update_settings_path(setting: "Primary Color Darken") %>">
-
-            <div id="colorinput-regular" class="btn primary-regular mr-3">
-              <%= t("administrator.site_settings.color.regular") %>
-            </div>
-
-            <div id="colorinput-lighten" class="btn primary-lighten mr-3">
-              <%= t("administrator.site_settings.color.lighten") %>
-            </div>
-
-            <div id="colorinput-darken" class="btn primary-darken">
-              <%= t("administrator.site_settings.color.darken") %>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
     <div class="mb-6 col-12">
       <div class="form-group">
         <label class="form-label"><%= t("administrator.site_settings.registration.title") %></label>
