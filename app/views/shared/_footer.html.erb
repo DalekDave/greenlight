@@ -14,19 +14,126 @@
 %>
 
 <footer class="footer pt-3">
-  <p class="text-center mb-1">
-    <% if legal_url.present? %>
-      <span>
-        <%= link_to(t("footer.legal"), legal_url) %>
-      </span> 
-    <% end %>
-    <% if privpolicy_url.present? %>
-      <span>
-        &#8226;
-        <%= link_to(t("footer.privpolicy"), privpolicy_url)  %>
-      </span>
-    <% end %>
-  </p>
+        <div class="hexagon-menu clear">
+            <div class="hexagon-item">
+                <div class="hex-item">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="hex-item">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <a href="/tos.html" target="_blank" class="hex-content">
+                    <span class="hex-content-inner">
+                        <span class="icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </span>
+                        <span class="title">Condtitons</span>
+                    </span>
+                    <svg viewbox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                </a>
+            </div>
+            <div class="hexagon-item">
+                <div class="hex-item">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="hex-item">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <a href="/privacy.html" target="_blank" class="hex-content">
+                    <span class="hex-content-inner">
+                        <span class="icon">
+                            <i class="fas fa-eye"></i>
+                        </span>
+                        <span class="title">Privacy</span>
+                    </span>
+                    <svg viewbox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                </a>
+            </div>
+            <div class="hexagon-item">
+                <div class="hex-item">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="hex-item">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <a href="/credits.html" target="_blank" class="hex-content">
+                    <span class="hex-content-inner">
+                        <span class="icon">
+                            <i class="fas fa-heart"></i>
+                        </span>
+                        <span class="title">Credits</span>
+                    </span>
+                    <svg viewbox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                </a>    
+            </div>
+            <div class="hexagon-item">
+                <div class="hex-item">
+                <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="hex-item">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <a href="/contact.html" target="_blank" class="hex-content">
+                    <span class="hex-content-inner">
+                        <span class="icon">
+                            <i class="fas fa-comment"></i>
+                        </span>
+                        <span class="title">Contact</span>
+                    </span>
+                    <svg viewbox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                </a>
+            </div>
+            <div class="hexagon-item">
+                <div class="hex-item">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="hex-item">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <a href="/imprint.html" target="_blank" class="hex-content">
+                    <span class="hex-content-inner">
+                        <span class="icon">
+                            <i class="fas fa-address-card"></i>
+                        </span>
+                        <span class="title">Imprint</span>
+                    </span>
+                    <svg viewbox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                </a>
+            </div>
+        </div> <!-- /.hexagon-menu -->
+        
+        
+                                    </div> <!-- /.col-xs-12 -->
+
+                        </div> <!-- /.row -->
+                    </div> <!-- /.container -->
+
+                </div> <!-- /.pt-tablecell -->
+            </div> <!-- /.pt-table -->
+        </main> <!-- /.site-wrapper -->
+
+        
+        
 </footer>
 
 <%= render "shared/components/cookie_warning" %>
